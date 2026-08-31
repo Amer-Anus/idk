@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Iceberg Maker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .background {
+            width: 100vw;
+            min-height: 100vh;
+            background-image: url("images/iceberg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 5vh;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .iceberg-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tier {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 15px 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .tier-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .tier-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px #000;
+            outline: none;
+        }
+
+        /* Highlight editable areas slightly on hover to show they are interactive */
+        [contenteditable="true"]:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            cursor: text;
+        }
+
+        .instructions {
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <!-- Editable Main Title -->
+        <h1 class="title" contenteditable="true">My Custom Iceberg</h1>
+
+        <div class="iceberg-container">
+            <!-- Tier 1 -->
+            <div class="tier">
+                <div class="tier-title" contenteditable="true">Level 1: Surface (Well Known)</div>
+                <div class="tier-content" contenteditable="true">• Entry point topic one<br>• Entry point topic two</div>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="tier">
+                <div class="tier-title" contenteditable="true">Level 2: Somewhat Known</div>
+                <div class="tier-content" contenteditable="true">• Deeper concept one<br>• Deeper concept two</div>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="tier">
+                <div class="tier-title" contenteditable="true">Level 3: Obscure</div>
+                <div class="tier-content" contenteditable="true">• Niche theory one<br>• Niche theory two</div>
+            </div>
+
+            <!-- Tier 4 -->
+            <div class="tier">
+                <div class="tier-title" contenteditable="true">Level 4: The Deep Abyss</div>
+                <div class="tier-content" contenteditable="true">• Lost media or deep lore<br>• The deepest secret</div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            💡 Tip: Click directly on any title or text box above to change the content instantly!
+        </div>
+    </div>
+
+</body>
+</html>
